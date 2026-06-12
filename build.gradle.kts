@@ -4,9 +4,10 @@ plugins {
 
 base {
     archivesName.set(properties["archives_base_name"] as String)
-    version.set(libs.versions.mod.version.get())
-    group.set(properties["maven_group"] as String)
 }
+
+version = libs.versions.mod.version.get()
+group = properties["maven_group"] as String
 
 repositories {
     mavenCentral()
