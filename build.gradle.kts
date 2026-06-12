@@ -10,27 +10,18 @@ base {
 
 repositories {
     mavenCentral()
-    maven { url = uri("https://maven.meteorclient.com/releases") }
-    maven { url = uri("https://jitpack.io") }
-    maven {
-        name = "meteor-maven"
-        url = uri("https://maven.meteordev.org/releases")
-    }
-    maven {
-        name = "meteor-maven-snapshots"
-        url = uri("https://maven.meteordev.org/snapshots")
-    }
+    maven { url = uri("https://maven.meteordev.org/releases") }
+    maven { url = uri("https://maven.meteordev.org/snapshots") }
 }
 
 dependencies {
-    compileOnly("com.github.cabaletta:baritone:1.21-SNAPSHOT")
+    // Meteor Client & Baritone Integration chuẩn bản 1.21.1
+    compileOnly("net.meteorclient:meteor-client:0.6.0-SNAPSHOT")
+    compileOnly("ch.alpine:baritone-api:fabric-1.21.1-SNAPSHOT")
 
-    // Fabric
+    // Fabric Core
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
-
-    // Meteor
-    implementation(libs.meteor.client)
 }
 
 java {
