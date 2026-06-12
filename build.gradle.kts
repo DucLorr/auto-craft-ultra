@@ -9,9 +9,9 @@ base {
 }
 
 repositories {
-    maven { url 'https://maven.meteorclient.com/releases' }
-maven { url 'https://jitpack.io' }
-
+    mavenCentral()
+    maven { url = uri("https://maven.meteorclient.com/releases") }
+    maven { url = uri("https://jitpack.io") }
     maven {
         name = "meteor-maven"
         url = uri("https://maven.meteordev.org/releases")
@@ -23,7 +23,7 @@ maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-       compileOnly 'com.github.cabaletta:baritone:1.21-SNAPSHOT'
+    compileOnly("com.github.cabaletta:baritone:1.21-SNAPSHOT")
 
     // Fabric
     minecraft(libs.minecraft)
