@@ -9,6 +9,9 @@ base {
 }
 
 repositories {
+    maven { url 'https://maven.meteorclient.com/releases' }
+maven { url 'https://jitpack.io' }
+
     maven {
         name = "meteor-maven"
         url = uri("https://maven.meteordev.org/releases")
