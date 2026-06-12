@@ -16,9 +16,6 @@ repositories {
 }
 
 dependencies {
-    // Meteor Client & Baritone Integration chuẩn bản 1.21.1
-    compileOnly("net.meteorclient:meteor-client:0.6.0-SNAPSHOT")
-    compileOnly("ch.alpine:baritone-api:fabric-1.21.1-SNAPSHOT")
 
     // Fabric Core
     minecraft(libs.minecraft)
