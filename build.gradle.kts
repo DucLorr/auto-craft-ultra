@@ -20,6 +20,8 @@ repositories {
 }
 
 dependencies {
+       compileOnly 'ch.alpine:baritone-api:fabric-1.21.11-SNAPSHOT'
+
     // Fabric
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
