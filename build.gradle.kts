@@ -23,7 +23,7 @@ maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-       compileOnly 'ch.alpine:baritone-api:fabric-1.21.11-SNAPSHOT'
+       compileOnly 'com.github.cabaletta:baritone:1.21-SNAPSHOT'
 
     // Fabric
     minecraft(libs.minecraft)
