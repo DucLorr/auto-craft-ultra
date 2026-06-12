@@ -3,9 +3,9 @@ plugins {
 }
 
 base {
-    archivesName = properties["archives_base_name"] as String
-    version = libs.versions.mod.version.get()
-    group = properties["maven_group"] as String
+    archivesName.set(properties["archives_base_name"] as String)
+    version.set(libs.versions.mod.version.get())
+    group.set(properties["maven_group"] as String)
 }
 
 repositories {
@@ -40,12 +40,11 @@ java {
 }
 
 fun toMinecraftCompat(version: String): String {
-    val match = Regex("""^(\d{2})\.([1-9]\d*)(?:\.([1-9]\d*))?$""")
-        .matchEntire(version)
-        ?: error("Invalid Minecraft version format: $version. Expected YY.D or YY.D.H")
+    val match = Regex("""^(\d{2})\.([1-9]\d*)(?:\.([1-9]\d*))?$""").matchEntire(version)
+        ?: error("Invalid Minecraft version format: ${version}. Expected YY.D or YY.D.H")
 
     val (year, drop, _) = match.destructured
-    return "~$year.$drop"
+    return "$year.$drop"
 }
 
 tasks {
